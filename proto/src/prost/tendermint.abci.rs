@@ -262,6 +262,7 @@ pub struct ResponseInitChain {
     #[prost(bytes="vec", tag="3")]
     pub app_hash: ::prost::alloc::vec::Vec<u8>,
 }
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResponseQuery {
     #[prost(uint32, tag="1")]

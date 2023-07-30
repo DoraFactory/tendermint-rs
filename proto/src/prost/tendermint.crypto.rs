@@ -56,6 +56,7 @@ pub struct DominoOp {
 /// ProofOp defines an operation used for calculating Merkle root
 /// The data could be arbitrary format, providing nessecary data
 /// for example neighbouring node hash
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProofOp {
     #[prost(string, tag="1")]
@@ -66,6 +67,7 @@ pub struct ProofOp {
     pub data: ::prost::alloc::vec::Vec<u8>,
 }
 /// ProofOps is Merkle proof defined by the list of ProofOps
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProofOps {
     #[prost(message, repeated, tag="1")]
