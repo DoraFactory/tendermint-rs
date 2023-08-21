@@ -262,6 +262,8 @@ pub struct ResponseInitChain {
     #[prost(bytes="bytes", tag="3")]
     pub app_hash: ::prost::bytes::Bytes,
 }
+
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResponseQuery {
     #[prost(uint32, tag="1")]
