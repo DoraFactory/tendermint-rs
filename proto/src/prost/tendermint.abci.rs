@@ -496,6 +496,7 @@ pub struct LastCommitInfo {
 /// Event allows application developers to attach additional information to
 /// ResponseBeginBlock, ResponseEndBlock, ResponseCheckTx and ResponseDeliverTx.
 /// Later, transactions may be queried using these events.
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Event {
     #[prost(string, tag="1")]
@@ -503,6 +504,7 @@ pub struct Event {
     #[prost(message, repeated, tag="2")]
     pub attributes: ::prost::alloc::vec::Vec<EventAttribute>,
 }
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 /// EventAttribute is a single key-value pair, associated with an event.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EventAttribute {
