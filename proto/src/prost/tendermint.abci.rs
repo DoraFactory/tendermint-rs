@@ -323,6 +323,8 @@ pub struct ResponseCheckTx {
     #[prost(string, tag="11")]
     pub mempool_error: ::prost::alloc::string::String,
 }
+
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResponseDeliverTx {
     #[prost(uint32, tag="1")]
