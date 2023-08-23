@@ -504,8 +504,9 @@ pub struct Event {
     #[prost(message, repeated, tag="2")]
     pub attributes: ::prost::alloc::vec::Vec<EventAttribute>,
 }
-#[derive(::serde::Deserialize, ::serde::Serialize)]
+
 /// EventAttribute is a single key-value pair, associated with an event.
+#[derive(::serde::Deserialize, ::serde::Serialize)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EventAttribute {
     #[prost(bytes="bytes", tag="1")]
